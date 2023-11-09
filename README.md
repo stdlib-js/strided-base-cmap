@@ -380,6 +380,13 @@ int main( void ) {
 
 <section class="related">
 
+* * *
+
+## See Also
+
+-   <span class="package-name">[`@stdlib/strided-base/zmap`][@stdlib/strided/base/zmap]</span><span class="delimiter">: </span><span class="description">apply a unary function to a double-precision complex floating-point strided input array and assign results to a double-precision complex floating-point strided output array.</span>
+-   <span class="package-name">[`@stdlib/strided-base/unary`][@stdlib/strided/base/unary]</span><span class="delimiter">: </span><span class="description">apply a unary callback to elements in a strided input array and assign results to elements in a strided output array.</span>
+
 </section>
 
 <!-- /.related -->
@@ -454,6 +461,14 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/strided-base-cmap/main/LICENSE
 
 [@stdlib/array/complex64]: https://github.com/stdlib-js/array-complex64
+
+<!-- <related-links> -->
+
+[@stdlib/strided/base/zmap]: https://github.com/stdlib-js/strided-base-zmap
+
+[@stdlib/strided/base/unary]: https://github.com/stdlib-js/strided-base-unary
+
+<!-- </related-links> -->
 
 </section>
 
