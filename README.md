@@ -48,13 +48,18 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import cmap from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-cmap@deno/mod.js';
+```
+The previous example will load the latest bundled code from the deno branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/strided-base-cmap/tags). For example,
+
+```javascript
 import cmap from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-cmap@v0.2.0-deno/mod.js';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { ndarray } from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-cmap@v0.2.0-deno/mod.js';
+import { ndarray } from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-cmap@deno/mod.js';
 ```
 
 #### cmap( N, x, strideX, y, strideY, fcn )
@@ -218,7 +223,7 @@ import filledarrayBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-filled-by
 import real from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-real@deno/mod.js';
 import imag from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-imag@deno/mod.js';
 import Complex64 from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float32@deno/mod.js';
-import cmap from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-cmap@v0.2.0-deno/mod.js';
+import cmap from 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-cmap@deno/mod.js';
 
 function scale( x ) {
     var re = real( x );
