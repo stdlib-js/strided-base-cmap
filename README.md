@@ -41,38 +41,32 @@ limitations under the License.
 
 <!-- /.intro -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/strided-base-cmap
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-cmap = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-cmap@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var cmap = require( 'path/to/vendor/umd/strided-base-cmap/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/strided-base-cmap@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.cmap;
-})();
-</script>
+var cmap = require( '@stdlib/strided-base-cmap' );
 ```
 
 #### cmap( N, x, strideX, y, strideY, fcn )
@@ -81,8 +75,8 @@ Applies a unary function to a single-precision complex floating-point strided in
 
 ```javascript
 var Complex64Array = require( '@stdlib/array-complex64' );
-var real = require( '@stdlib/complex-real' );
-var imag = require( '@stdlib/complex-imag' );
+var real = require( '@stdlib/complex-float64-real' );
+var imag = require( '@stdlib/complex-float64-imag' );
 var cceilf = require( '@stdlib/math-base-special-cceilf' );
 
 var x = new Complex64Array( [ -2.3, 1.5, 3.1, -5.2, 4.8, 0.0, -1.6, 3.4 ] );
@@ -113,8 +107,8 @@ The `N` and stride parameters determine which elements in the strided arrays are
 
 ```javascript
 var Complex64Array = require( '@stdlib/array-complex64' );
-var real = require( '@stdlib/complex-real' );
-var imag = require( '@stdlib/complex-imag' );
+var real = require( '@stdlib/complex-float64-real' );
+var imag = require( '@stdlib/complex-float64-imag' );
 var cceilf = require( '@stdlib/math-base-special-cceilf' );
 
 var x = new Complex64Array( [ -2.3, 1.5, 3.1, -5.2, 4.8, 0.0, -1.6, 3.4 ] );
@@ -136,8 +130,8 @@ Note that indexing is relative to the first index. To introduce an offset, use [
 
 ```javascript
 var Complex64Array = require( '@stdlib/array-complex64' );
-var real = require( '@stdlib/complex-real' );
-var imag = require( '@stdlib/complex-imag' );
+var real = require( '@stdlib/complex-float64-real' );
+var imag = require( '@stdlib/complex-float64-imag' );
 var cceilf = require( '@stdlib/math-base-special-cceilf' );
 
 // Initial arrays...
@@ -166,8 +160,8 @@ Applies a unary function to a single-precision complex floating-point strided in
 
 ```javascript
 var Complex64Array = require( '@stdlib/array-complex64' );
-var real = require( '@stdlib/complex-real' );
-var imag = require( '@stdlib/complex-imag' );
+var real = require( '@stdlib/complex-float64-real' );
+var imag = require( '@stdlib/complex-float64-imag' );
 var cceilf = require( '@stdlib/math-base-special-cceilf' );
 
 var x = new Complex64Array( [ -2.3, 1.5, 3.1, -5.2, 4.8, 0.0, -1.6, 3.4 ] );
@@ -194,8 +188,8 @@ While [`typed array`][@stdlib/array/complex64] views mandate a view offset based
 
 ```javascript
 var Complex64Array = require( '@stdlib/array-complex64' );
-var real = require( '@stdlib/complex-real' );
-var imag = require( '@stdlib/complex-imag' );
+var real = require( '@stdlib/complex-float64-real' );
+var imag = require( '@stdlib/complex-float64-imag' );
 var cceilf = require( '@stdlib/math-base-special-cceilf' );
 
 var x = new Complex64Array( [ -2.3, 1.5, 3.1, -5.2, 4.8, 0.0, -1.6, 3.4 ] );
@@ -229,17 +223,12 @@ var im = imag( v );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {.factory;
+```javascript
+var discreteUniform = require( '@stdlib/random-base-discrete-uniform' ).factory;
 var Complex64Array = require( '@stdlib/array-complex64' );
 var filledarrayBy = require( '@stdlib/array-filled-by' );
-var real = require( '@stdlib/complex-real' );
-var imag = require( '@stdlib/complex-imag' );
+var real = require( '@stdlib/complex-float64-real' );
+var imag = require( '@stdlib/complex-float64-imag' );
 var Complex64 = require( '@stdlib/complex-float32-ctor' );
 var cmap = require( '@stdlib/strided-base-cmap' );
 
@@ -258,11 +247,6 @@ console.log( y );
 
 cmap.ndarray( x.length, x, 1, 0, y, -1, y.length-1, scale );
 console.log( y );
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -271,7 +255,128 @@ console.log( y );
 
 <!-- C interface documentation. -->
 
+* * *
 
+<section class="c">
+
+## C APIs
+
+<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
+
+<section class="intro">
+
+</section>
+
+<!-- /.intro -->
+
+<!-- C usage documentation. -->
+
+<section class="usage">
+
+### Usage
+
+```c
+#include "stdlib/strided/base/cmap.h"
+```
+
+#### stdlib_strided_cmap( N, \*X, strideX, \*Y, strideY, fcn )
+
+Applies a unary function to a single-precision complex floating-point strided input array and assigns results to a single-precision complex floating-point strided output array.
+
+```c
+#include <stdint.h>
+#include <complex.h>
+
+static float complex scale( const float complex x ) {
+    float re = crealf( x );
+    float im = cimagf( x );
+    return ( re+10.0f ) + ( im+10.0f )*I;
+}
+
+float complex X[] = { 1.0f+1.0f*I, 2.0f+2.0f*I, 3.0f+3.0f*I, 4.0f+4.0f*I, 5.0f+5.0f*I, 6.0f+6.0f*I };
+float complex Y[] = { 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f };
+
+int64_t N = 6;
+
+stdlib_strided_cmap( N, X, 1, Y, 1, scale );
+```
+
+The function accepts the following arguments:
+
+-   **N**: `[in] int64_t` number of indexed elements.
+-   **X**: `[in] float complex*` input array.
+-   **strideX** `[in] int64_t` index increment for `X`.
+-   **Y**: `[out] float complex*` output array.
+-   **strideY**: `[in] int64_t` index increment for `Y`.
+-   **fcn**: `[in] float complex (*fcn)( float complex )` unary function to apply.
+
+```c
+void stdlib_strided_cmap( const int64_t N, const float complex *X, const int64_t strideX, float complex *Y, const int64_t strideY, float complex (*fcn)( float complex ) );
+```
+
+</section>
+
+<!-- /.usage -->
+
+<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+<section class="notes">
+
+</section>
+
+<!-- /.notes -->
+
+<!-- C API usage examples. -->
+
+<section class="examples">
+
+### Examples
+
+```c
+#include "stdlib/strided/base/cmap.h"
+#include <stdint.h>
+#include <stdio.h>
+#include <inttypes.h>
+#include <complex.h>
+
+// Define a callback:
+static float complex scale( const float complex x ) {
+    float re = crealf( x );
+    float im = cimagf( x );
+    return ( re+10.0f ) + ( im+10.0f )*I;
+}
+
+int main( void ) {
+    // Create an input strided array:
+    float complex X[] = { 1.0+1.0*I, 2.0+2.0*I, 3.0+3.0*I, 4.0+4.0*I, 5.0+5.0*I, 6.0+6.0*I };
+
+    // Create an output strided array:
+    float complex Y[] = { 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 };
+
+    // Specify the number of elements:
+    int64_t N = 6;
+
+    // Define the strides:
+    int64_t strideX = 1;
+    int64_t strideY = -1;
+
+    // Apply the callback:
+    stdlib_strided_cmap( N, X, strideX, Y, strideY, scale );
+
+    // Print the results:
+    for ( int64_t i = 0; i < N; i++ ) {
+        printf( "Y[ %"PRId64" ] = %f + %fi\n", i, creal( Y[i] ), cimag( Y[i] ) );
+    }
+}
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.c -->
 
 <!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
 
@@ -327,8 +432,8 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/strided-base-cmap.svg
 [npm-url]: https://npmjs.org/package/@stdlib/strided-base-cmap
 
-[test-image]: https://github.com/stdlib-js/strided-base-cmap/actions/workflows/test.yml/badge.svg?branch=main
-[test-url]: https://github.com/stdlib-js/strided-base-cmap/actions/workflows/test.yml?query=branch:main
+[test-image]: https://github.com/stdlib-js/strided-base-cmap/actions/workflows/test.yml/badge.svg?branch=v0.2.2
+[test-url]: https://github.com/stdlib-js/strided-base-cmap/actions/workflows/test.yml?query=branch:v0.2.2
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/strided-base-cmap/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/strided-base-cmap?branch=main
@@ -360,13 +465,13 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/strided-base-cmap/main/LICENSE
 
-[@stdlib/array/complex64]: https://github.com/stdlib-js/array-complex64/tree/umd
+[@stdlib/array/complex64]: https://github.com/stdlib-js/array-complex64
 
 <!-- <related-links> -->
 
-[@stdlib/strided/base/zmap]: https://github.com/stdlib-js/strided-base-zmap/tree/umd
+[@stdlib/strided/base/zmap]: https://github.com/stdlib-js/strided-base-zmap
 
-[@stdlib/strided/base/unary]: https://github.com/stdlib-js/strided-base-unary/tree/umd
+[@stdlib/strided/base/unary]: https://github.com/stdlib-js/strided-base-unary
 
 <!-- </related-links> -->
 
