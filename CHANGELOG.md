@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-07-29)
+## Unreleased (2025-12-15)
 
 <section class="issues">
 
@@ -24,7 +24,9 @@ A total of 2 issues were closed in this release:
 
 <details>
 
--   [`9b22fea`](https://github.com/stdlib-js/stdlib/commit/9b22feadb9bb2c81315f4bd426bd025f5423d27c) - **chore:** fix C lint errors [(#7768)](https://github.com/stdlib-js/stdlib/pull/7768) _(by GeoDaoyu)_
+-   [`3de4c3c`](https://github.com/stdlib-js/stdlib/commit/3de4c3c636e9aab29d8cb90a54530894b8397a8c) - **docs:** improve doctests for complex number instances in `strided/base/cmap` [(#8954)](https://github.com/stdlib-js/stdlib/pull/8954) _(by Prajjwal Bajpai)_
+-   [`504a3f1`](https://github.com/stdlib-js/stdlib/commit/504a3f1d1db20b670b48efd1c292d7efbb433b58) - **style:** fix indentation in JSON files _(by Philipp Burckhardt)_
+-   [`9b22fea`](https://github.com/stdlib-js/stdlib/commit/9b22feadb9bb2c81315f4bd426bd025f5423d27c) - **chore:** fix C lint errors [(#7768)](https://github.com/stdlib-js/stdlib/pull/7768) _(by Geo Daoyu)_
 -   [`b818857`](https://github.com/stdlib-js/stdlib/commit/b818857bc88d94bc93bbb119626c6c897b0c46a8) - **chore:** fix C lint errors [(#6279)](https://github.com/stdlib-js/stdlib/pull/6279) _(by Aarya Balwadkar, Athan Reines)_
 -   [`845e64a`](https://github.com/stdlib-js/stdlib/commit/845e64a2f7e12bd60729097230774569b2d4954e) - **refactor:** update paths _(by Gururaj Gurram)_
 -   [`62364f6`](https://github.com/stdlib-js/stdlib/commit/62364f62ea823a3b52c2ad25660ecd80c71f8f36) - **style:** fix C comment alignment _(by Philipp Burckhardt)_
@@ -40,13 +42,14 @@ A total of 2 issues were closed in this release:
 
 ### Contributors
 
-A total of 5 people contributed to this release. Thank you to the following contributors:
+A total of 6 people contributed to this release. Thank you to the following contributors:
 
 -   Aarya Balwadkar
 -   Athan Reines
--   GeoDaoyu
+-   Geo Daoyu
 -   Gururaj Gurram
 -   Philipp Burckhardt
+-   Prajjwal Bajpai
 
 </section>
 
