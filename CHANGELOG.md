@@ -12,6 +12,7 @@
 
 <details>
 
+-   [`8e870bf`](https://github.com/stdlib-js/stdlib/commit/8e870bf7e5459a7a2c781004e35c559972b52d39) - **docs:** use correct `real`/`imag` import in `strided/base/cmap` [(#12057)](https://github.com/stdlib-js/stdlib/pull/12057) _(by Karan Anand)_
 -   [`3a68571`](https://github.com/stdlib-js/stdlib/commit/3a68571c9986c75439da1e4ca96055bef4b892ad) - **docs:** improve doctests for complex number typed arrays in `strided` [(#12032)](https://github.com/stdlib-js/stdlib/pull/12032) _(by Karan Anand)_
 -   [`16607df`](https://github.com/stdlib-js/stdlib/commit/16607dfe75708434e77ea1ed8531bff8ebbe3a0c) - **bench:** refactor to use string interpolation in `strided/base/cmap` [(#10609)](https://github.com/stdlib-js/stdlib/pull/10609) _(by Vishal Gaikwad)_
 
